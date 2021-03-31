@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback(body.error.info, undefined)
         } else {
-            callback(undefined, 'It is currenly ' + body.current.temperature + ' degrees. It feels like ' + body.current.feelslike + ' degrees out.')
+            callback(undefined, 'It is currenly ' + body.current.temperature + ' degrees. It feels like ' + body.current.feelslike + ' degrees out. Humidity is at ' + body.current.humidity + '%')
         }
     })
 }
